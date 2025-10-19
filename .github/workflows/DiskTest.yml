@@ -17,5 +17,5 @@ jobs:
         run: |
           Install-Module Pester -Force -Scope CurrentUser
           Invoke-Pester -Path .\FindDisk.Tests.ps1
-          Invoke-Pester -Path .\FindDisk.Tests.ps1 -inputValue 30
+          Invoke-Pester -Path .\FizzBuzz.Tests.ps1 -inputValue 30
         shell: pwsh
