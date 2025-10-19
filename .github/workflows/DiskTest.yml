@@ -1,5 +1,20 @@
-- name: Uruchom testy Pester
-  run: |
-    Install-Module Pester -Force -Scope CurrentUser
-    Invoke-Pester -Path .\FindDisk.Tests.ps1
-  shell: pwsh
+name: Disk Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Uruchom testy Pester
+        run: |
+          Install-Module Pester -Force -Scope CurrentUser
+          Invoke-Pester -Path .\FindDisk.Tests.ps1
+        shell: pwsh
