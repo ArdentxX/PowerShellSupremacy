@@ -1,5 +1,5 @@
 - name: Uruchom testy Pester
   run: |
     Install-Module Pester -Force -Scope CurrentUser
-    Invoke-Pester -Path .\Check-Disk.Tests.ps1
+    Invoke-Pester -Path .\FindDisk.Tests.ps1
   shell: pwsh
