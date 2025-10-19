@@ -2,7 +2,7 @@ param(
 [int]$max = 30
 )
 $tab = @()
-for($i = 1;$i -le $max;$i++0){
+for($i = 1;$i -le $max;$i++){
   if($i % 5 -eq 0 -and $i % 3 -eq 0){
     $tab += "FizzBuzz"
     }
