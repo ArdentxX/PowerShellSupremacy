@@ -16,4 +16,5 @@ for($i = 1;$i -le $max;$i++){
       $tab += $i
       }
   }
+return $tab
     
